@@ -25,6 +25,7 @@
     <Compile Include="_module\header.php" />
     <Compile Include="_module\loadscripts.php" />
     <Compile Include="_module\menu.php" />
+    <Compile Include="_module\sidebar.php" />
     <Compile Include="_module\top.php" />
     <Compile Include="_pages\index.php" />
   </ItemGroup>
