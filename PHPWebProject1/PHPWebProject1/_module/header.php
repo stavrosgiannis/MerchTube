@@ -11,14 +11,14 @@
 ?>
 
 <header>
-    
+
     <div class="header-area">
         <div class="container">
             <div class="row">
-                 <div class="col-md-8">
-                      <div class="user-menu">
-                          <p>Header placeholder</p>
-                          <!-- <ul>
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <p>Header placeholder</p>
+                        <!-- <ul>
                                 <li>
                                 <a href="myaccount.php">
                                     <i class="fa fa-user"></i><?php echo $lang["MyAccount"]; ?>
@@ -107,5 +107,5 @@
             </div>
         </div>
     </div>
-<!-- End header area -->
+    <!-- End header area -->
 </header>
