@@ -35,7 +35,7 @@
 }
 
 .floatleft {
-    float: left
+    float: left;
 }
 
 .floatright {
@@ -1475,4 +1475,29 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 .backgr {
     max-height: 465px;
     width: auto;
+}
+
+.mainspace {
+	margin-left: 250px;
+	margin-right: 350px;
+}
+
+.Werbe-space {
+	
+	margin-left: 250px;
+	margin-right: 350px;
+}
+
+/*Überschrift für alpahabetische anordnung				*/
+
+.ueberschrift{
+	font-size:28pt;  
+	font-family: "Roboto Condensed",sans-serif;
+}
+
+/*Überschrift für alpahabetische anordnung				*/
+
+
+.top-space{
+	margin-top:50px;
 }
