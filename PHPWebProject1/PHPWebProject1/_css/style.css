@@ -1524,8 +1524,9 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 
 div.scrollbar {
 	height: 260px;
-    width: 80%;
+    width: 87%;
     overflow-x:scroll;
+	margin-bottom:4%;
 }
 
 .img-einkaufswagen {
