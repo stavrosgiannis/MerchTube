@@ -3,11 +3,7 @@
 include '../_module/top.php';
 ?>
 
-<?php
-// --------------------------------------------Bottom------------------------------------------------------------->
 
-include '../_module/bottom.php';
-?>
 
 <div class="top-space"></div>
 
@@ -19,7 +15,16 @@ include '../_module/bottom.php';
                     <h2 id="sort_a">#A</h2>
                 </a>
             </div>
-            <div id="bild-container"></div>
+            <div id="bild-container">
+
+            </div>
         </div>
     </div>
 </div>
+
+
+<?php
+// --------------------------------------------Bottom------------------------------------------------------------->
+
+include '../_module/bottom.php';
+?>
