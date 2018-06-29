@@ -1478,13 +1478,12 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 .mainspace {
-	margin-left: 250px;
+	margin-left: 25%;
 	margin-right: 350px;
 }
 
 .Werbe-space {
-	
-	margin-left: 350px;
+	margin-left: 1330px;
 	margin-right: 350px;
 }
 
@@ -1493,12 +1492,36 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 .ueberschrift{
 	font-size:28pt;  
 	font-family: "Roboto Condensed",sans-serif;
+	text-decoration:none;
+	color:#999999;
 }
 
 /*Überschrift für alpahabetische anordnung				*/
 
 
 .top-space{
-	margin-top:75px;
+	margin-top:90px;
+	
+}
 
+/*Bilder der Anbieter 				*/
+
+.container-bilder {
+    width: 250px;
+    height: 200px;
+    background-color:  #999999;
+    margin: 30px;
+    padding: 10px;
+	text-align: center;  
+	text-decoration: none;
+}
+
+.allign-container{
+	margin-left: 25%;
+	
+}
+
+.reihe1{
+	max-height: 300px;
+	overflow-x:scroll;
 }
