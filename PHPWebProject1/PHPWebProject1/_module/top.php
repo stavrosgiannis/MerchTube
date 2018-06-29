@@ -14,7 +14,7 @@
 <html lang="de">
 
 <?php
-include_once '../class/kunde.php';
+include_once '../_class/kunde.php';
 set_include_path ('.');
 session_start();
 include 'head.php';
