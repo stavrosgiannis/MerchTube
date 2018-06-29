@@ -49,6 +49,12 @@
                         </a>
                     </li>
                 </ul>
+				
+				<a href="#">
+					<img class="img-einkaufswagen" src="../_img/einkaufswagen.png" alt="einkaufswagen"> </img>
+				</a>
+				<p class="loginbox";>  <a href="#">  Login </a>	</p>
+		
             </div>
         </div>
     </div>

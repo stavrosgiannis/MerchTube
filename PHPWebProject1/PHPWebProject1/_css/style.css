@@ -1524,6 +1524,22 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 
 div.scrollbar {
 	height: 260px;
-    width: 1000px;
-    overflow-x: scroll;
+    width: 80%;
+    overflow-x:scroll;
+}
+
+.img-einkaufswagen {
+	height:40px;
+	width:45px;
+	float: right;
+	margin-top: 0.9%;
+	margin-right:2%;
+}
+
+.loginbox {
+	width: 100px;
+    height: 20px;
+    margin: 20px;
+	text-align: center;  
+	float: right; 
 }
