@@ -1507,6 +1507,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 /*Bilder der Anbieter 				*/
 
 .container-bilder {
+
     width: 250px;
     height: 200px;
     background-color:  #999999;
@@ -1521,7 +1522,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 	
 }
 
-.reihe1{
-	max-height: 300px;
-	overflow-x:scroll;
+div.scrollbar {
+	height: 260px;
+    width: 1000px;
+    overflow-x: scroll;
 }

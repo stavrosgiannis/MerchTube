@@ -17,11 +17,12 @@ include '../_module/bottom.php';
 	<!-- Zahl = bild breite -->
 	<a class="ueberschrift" href="_pages/#A"><p>#A</p></a>
 	<!-- Name und Bilder nachträglich einfügen -->
+	<div class="scrollbar">
 	<img class="container-bilder" src="../_img/test_bild.png" alt="test1"> </img>	
 	<img class="container-bilder" src="../_img/test_bild.png" alt="test2"> </img>	
 	<img class="container-bilder" src="../_img/test_bild.png" alt="test1"> </img>	
 	<img class="container-bilder" src="../_img/test_bild.png" alt="test2"> </img>
-
+	</div>
 	</div>
 </div>
 
