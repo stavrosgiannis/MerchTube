@@ -17,6 +17,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="index.php" />
+    <Compile Include="_class\kunde.php" />
     <Compile Include="_languages\de.php" />
     <Compile Include="_languages\en.php" />
     <Compile Include="_module\bottom.php" />
