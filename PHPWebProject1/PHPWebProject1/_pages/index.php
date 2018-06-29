@@ -46,14 +46,13 @@ include '../_module/top.php';
         </div>
 
         <hr />
-        <div class="werbung-banner">
-            <h1>Banner-Werbung</h1>
-        </div>
-
         <div id="titel-container">
             <a style="text-decoration:none;" class="ueberschrift">
                 <h2 id="sort_a">#A</h2>
             </a>
+            <div class="werbung-banner">
+                <img src="../_img/werbung/werbung.jpg" alt="Werbung" />
+            </div>
         </div>
     </div>
 </div>
