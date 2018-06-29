@@ -11,8 +11,15 @@ include '../_module/bottom.php';
 
 <div class="top-space"></div>
 
-<div class="mainspace">
-    <a class="ueberschrift">
-        <h2>#A</h2>
-    </a>
+<div class="container align-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div id="titel-container">
+                <a class="ueberschrift">
+                    <h2 id="sort_a">#A</h2>
+                </a>
+            </div>
+            <div id="bild-container"></div>
+        </div>
+    </div>
 </div>
