@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="footer-top-area">
+<!--<div class="footer-top-area">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- End footer top area -->
 
 <div class="footer-bottom-area">
@@ -112,10 +112,10 @@
 
             <div class="col-md-4">
                 <div class="footer-card-icon">
-                    <i class="fa fa-cc-discover"></i>
-                    <i class="fa fa-cc-mastercard"></i>
-                    <i class="fa fa-cc-paypal"></i>
-                    <i class="fa fa-cc-visa"></i>
+                    <i class="fab fa-cc-discover"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-visa"></i>
                 </div>
             </div>
         </div>

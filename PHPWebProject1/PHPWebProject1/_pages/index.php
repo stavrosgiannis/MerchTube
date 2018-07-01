@@ -5,56 +5,129 @@ include '../_module/top.php';
 
 <div class="top-space"></div>
 
-<div class="container align-container">
-    <div class="row">
-        <div id="bild-container" class="">
-            <!-- 3D Slideshow Section -->
-            <section id="slideshow">
+<div class="maincontent-area align-container">
 
-                <div class="entire-content">
-                    <div class="content-carrousel">
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/758733/pexels-photo-758733.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/21261/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/567973/pexels-photo-567973.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/776653/pexels-photo-776653.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/54630/japanese-cherry-trees-flowers-spring-japanese-flowering-cherry-54630.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/131046/pexels-photo-131046.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/302515/pexels-photo-302515.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/301682/pexels-photo-301682.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
-                        <figure class="shadow">
-                            <img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" />
-                        </figure>
+    <!-- Start Trends area -->
+    <!--<div class="brands-area">-->
+    <div class="container">
+        <div class="row">
+            <a style="text-decoration:none;">
+                <h2 id="trends">Beliebte Streamer</h2>
+            </a>
+            <div class="col-md-12">
+                <div class="brand-wrapper">
+                    <div class="brand-list">
+                        <a href="#">
+                            <img src="../_img/brand1.png" alt="" title="Nokia" />
+                        </a>
+                        <img src="../_img/brand2.png" alt="" />
+                        <img src="../_img/brand3.png" alt="" />
+                        <img src="../_img/brand4.png" alt="" />
+                        <img src="../_img/brand5.png" alt="" />
+                        <img src="../_img/brand6.png" alt="" />
+                        <img src="../_img/brand1.png" alt="" />
+                        <img src="../_img/brand2.png" alt="" />
                     </div>
                 </div>
-            </section>
-        </div>
-
-        <hr />
-        <div id="titel-container">
-            <a style="text-decoration:none;" class="ueberschrift">
-                <h2 id="sort_a">#A</h2>
-            </a>
-            <div class="werbung-banner">
-                <img src="../_img/werbung/werbung.jpg" alt="Werbung" />
             </div>
         </div>
     </div>
+    <!--</div>-->
+    <!-- End Trends area -->
+
+    <br />
+    <div id="titel-container">
+
+        <!-- Start Alphabet A area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_a">#A</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet A area -->
+
+        <!-- Start Alphabet B area -->
+        <!--<div class="brands-area">-->
+        <div class="container">
+            <div class="row">
+                <a style="text-decoration:none;">
+                    <h2 id="sort_b">#B</h2>
+                </a>
+                <div class="col-md-12">
+                    <div class="brand-wrapper">
+                        <div class="brand-list">
+                            <a href="#">
+                                <img src="../_img/brand1.png" alt="" title="Nokia" />
+                            </a>
+                            <img src="../_img/brand2.png" alt="" />
+                            <img src="../_img/brand3.png" alt="" />
+                            <img src="../_img/brand4.png" alt="" />
+                            <img src="../_img/brand5.png" alt="" />
+                            <img src="../_img/brand6.png" alt="" />
+                            <img src="../_img/brand1.png" alt="" />
+                            <img src="../_img/brand2.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!-- End Alphabet B area -->
+
+        <!-- Start Alphabet C area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_c">#C</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet C area -->
+    </div>
+
+    <!--<div class="werbung-banner">
+            <h2>Werbung Banner</h2>
+            <p>420x800</p>
+            <img src="../_img/werbung/werbung.jpg" alt="Werbung" />
+        </div>-->
 </div>
 
 <?php
@@ -62,3 +135,15 @@ include '../_module/top.php';
 
 include '../_module/bottom.php';
 ?>
+<!-- Start Cookie Plugin -->
+<script type="text/javascript">
+    window.cookieconsent_options = {
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
+        dismiss: 'Ok, verstanden',
+        learnMore: 'Mehr Infos',
+        link: 'https://website-tutor.com/datenschutz',
+        theme: 'dark-bottom'
+    };
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
+<!-- Ende Cookie Plugin -->

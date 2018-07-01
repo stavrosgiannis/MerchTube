@@ -28,6 +28,7 @@
     <Compile Include="_module\menu.php" />
     <Compile Include="_module\sidebar.php" />
     <Compile Include="_module\top.php" />
+    <Compile Include="_pages\impressum.php" />
     <Compile Include="_pages\index.php" />
   </ItemGroup>
   <ItemGroup>
@@ -43,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_css\bootstrap.min.css" />
+    <Content Include="_css\bxslider.css" />
     <Content Include="_css\font-awesome.min.css" />
+    <Content Include="_css\owl.carousel.css" />
     <Content Include="_css\responsive.css" />
+    <Content Include="_css\sequence-theme.modern-slide-in.css" />
     <Content Include="_css\style.css" />
     <Content Include="_fonts\fontawesome-webfont.eot" />
     <Content Include="_fonts\fontawesome-webfont.svg" />
@@ -55,8 +59,20 @@
     <Content Include="_fonts\glyphicons-halflings-regular.svg" />
     <Content Include="_fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="_fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_img\brand1.png" />
+    <Content Include="_img\brand2.png" />
+    <Content Include="_img\brand3.png" />
+    <Content Include="_img\brand4.png" />
+    <Content Include="_img\brand5.png" />
+    <Content Include="_img\brand6.png" />
     <Content Include="_img\werbung\werbung.jpg" />
+    <Content Include="_js\bxslider.min.js" />
+    <Content Include="_js\imagesloaded.pkgd.min.js" />
     <Content Include="_js\jquery.easing.1.3.min.js" />
+    <Content Include="_js\jquery.sticky.js" />
     <Content Include="_js\main.js" />
+    <Content Include="_js\owl.carousel.min.js" />
+    <Content Include="_js\respond.min.js" />
+    <Content Include="_js\script.slider.js" />
   </ItemGroup>
 </Project>
