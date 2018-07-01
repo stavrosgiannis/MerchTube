@@ -24,7 +24,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a href="main.php">
+                        <a href="index.php">
                             <?php echo $lang["Home"]; ?>
                         </a>
                     </li>

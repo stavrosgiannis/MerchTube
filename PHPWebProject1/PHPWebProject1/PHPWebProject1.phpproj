@@ -17,7 +17,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="index.php" />
+    <Compile Include="_class\artikel.php" />
+    <Compile Include="_class\artikel_DBC.php" />
+    <Compile Include="_class\db.php" />
     <Compile Include="_class\kunde.php" />
+    <Compile Include="_class\kunde_DBC.php" />
     <Compile Include="_languages\de.php" />
     <Compile Include="_languages\en.php" />
     <Compile Include="_module\bottom.php" />
@@ -30,9 +34,14 @@
     <Compile Include="_module\top.php" />
     <Compile Include="_pages\impressum.php" />
     <Compile Include="_pages\index.php" />
+    <Compile Include="_pages\login.php" />
+    <Compile Include="_pages\login_antwort.php" />
+    <Compile Include="_pages\logout.php" />
+    <Compile Include="_pages\register.php" />
+    <Compile Include="_pages\registration_antwort.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_img\werbung\" />
+    <Folder Include="_img\profilbilder\" />
     <Folder Include="_pages\" />
     <Folder Include="_fonts\" />
     <Folder Include="_css\" />
@@ -65,7 +74,6 @@
     <Content Include="_img\brand4.png" />
     <Content Include="_img\brand5.png" />
     <Content Include="_img\brand6.png" />
-    <Content Include="_img\werbung\werbung.jpg" />
     <Content Include="_js\bxslider.min.js" />
     <Content Include="_js\imagesloaded.pkgd.min.js" />
     <Content Include="_js\jquery.easing.1.3.min.js" />

@@ -9,7 +9,7 @@ include '../_module/top.php';
 
     <!-- Start Trends area -->
     <!--<div class="brands-area">-->
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <a style="text-decoration:none;">
                 <h2 id="trends">Beliebte Streamer</h2>
@@ -31,7 +31,7 @@ include '../_module/top.php';
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!--</div>-->
     <!-- End Trends area -->
 
@@ -121,6 +121,202 @@ include '../_module/top.php';
             </div>
         </div>
         <!-- End Alphabet C area -->
+
+        <!-- Start Alphabet D area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_d">#D</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet D area -->
+
+        <!-- Start Alphabet E area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_e">#E</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet E area -->
+
+        <!-- Start Alphabet F area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_f">#F</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet F area -->
+
+        <!-- Start Alphabet G area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_g">#G</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet G area -->
+
+        <!-- Start Alphabet H area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_h">#H</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet H area -->
+
+        <!-- Start Alphabet I area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_i">#I</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet I area -->
+
+        <!-- Start Alphabet J area -->
+        <div class="brands-area">
+            <div class="container">
+                <div class="row">
+                    <a style="text-decoration:none;">
+                        <h2 id="sort_j">#J</h2>
+                    </a>
+                    <div class="col-md-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <a href="#">
+                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                </a>
+                                <img src="../_img/brand2.png" alt="" />
+                                <img src="../_img/brand3.png" alt="" />
+                                <img src="../_img/brand4.png" alt="" />
+                                <img src="../_img/brand5.png" alt="" />
+                                <img src="../_img/brand6.png" alt="" />
+                                <img src="../_img/brand1.png" alt="" />
+                                <img src="../_img/brand2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Alphabet J area -->
     </div>
 
     <!--<div class="werbung-banner">
