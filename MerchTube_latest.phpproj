@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Name>MerchTube_latest</Name>
-    <ProjectGuid>{9b457267-3a91-4aba-9eaa-8def35ab07b6}</ProjectGuid>
+    <ProjectGuid>{78f25acf-b573-42d9-a871-e9ace1c44bdc}</ProjectGuid>
     <RootNamespace>
     </RootNamespace>
     <OutputType>Library</OutputType>
@@ -17,9 +17,6 @@
   <ItemGroup>
     <Compile Include=".github\ISSUE_TEMPLATE\bug_report.md" />
     <Compile Include=".github\ISSUE_TEMPLATE\feature_request.md" />
-    <Compile Include=".vs\ProjectSettings.json" />
-    <Compile Include=".vs\slnx.sqlite" />
-    <Compile Include=".vs\VSWorkspaceState.json" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_class\artikel.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_class\artikel_DBC.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_class\db.php" />
@@ -73,11 +70,8 @@
     <Compile Include="PHPWebProject1\PHPWebProject1\_module\sidebar.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_module\top.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_module\warenkorbhinzufuegeninhalt.php" />
-    <Compile Include="PHPWebProject1\PHPWebProject1\_pages\bestellprozess.php" />
-    <Compile Include="PHPWebProject1\PHPWebProject1\_pages\channel.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\impressum.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\index.php" />
-    <Compile Include="PHPWebProject1\PHPWebProject1\_pages\login.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\login_anfrage.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\login_antwort.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\logout.php" />
@@ -86,8 +80,6 @@
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\passwort_aendern_antwort.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\profilbild_hochladen_anfrage.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\profilbild_hochladen_antwort.php" />
-    <Compile Include="PHPWebProject1\PHPWebProject1\_pages\register.php" />
-    <Compile Include="PHPWebProject1\PHPWebProject1\_pages\registration_antwort.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\registrierung_anfrage.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\registrierung_antwort.php" />
     <Compile Include="PHPWebProject1\PHPWebProject1\_pages\suche_antwort.php" />
@@ -96,14 +88,12 @@
     <Compile Include="PHPWebProject1\PHPWebProject1\merchtube.sql" />
     <Compile Include=".gitattributes" />
     <Compile Include=".gitignore" />
+    <Compile Include="MerchTube_latest.phpproj" />
     <Compile Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".github\ISSUE_TEMPLATE" />
     <Folder Include=".github" />
-    <Folder Include=".vs\MerchTube\v15" />
-    <Folder Include=".vs\MerchTube" />
-    <Folder Include=".vs" />
     <Folder Include="PHPWebProject1\PHPWebProject1\_class" />
     <Folder Include="PHPWebProject1\PHPWebProject1\_css" />
     <Folder Include="PHPWebProject1\PHPWebProject1\_fonts" />

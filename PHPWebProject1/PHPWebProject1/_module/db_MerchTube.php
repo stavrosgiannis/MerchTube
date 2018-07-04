@@ -1,6 +1,6 @@
 <?php
-	$host = "localhost";
-	$user = "root";
-	$pwd  = "";
-	$db   = "MerchTube";
+$host = "localhost";
+$user = "root";
+$pwd  = "";
+$db   = "MerchTube";
 ?>

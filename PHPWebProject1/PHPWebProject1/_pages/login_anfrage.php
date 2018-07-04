@@ -26,7 +26,7 @@
 	<form action="login_antwort.php" method="POST">
 		<table>
 			<tr>
-				<td>Anwendername:</td>				
+				<td>Anwendername:</td>
 				<td><input type="text" name="anwender_name"></td>
 			</tr>
 			<tr>
@@ -38,6 +38,6 @@
 	</form>
 	<a href="registrierung_anfrage.php">Registrieren</a><br>
 	<a href="passwort_aendern_anfrage.php">Haben sie ihr Passwort vergessen?</a>
-	<div/>
+	<div />
 </body>
 </html>

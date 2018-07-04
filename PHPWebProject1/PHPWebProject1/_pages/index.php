@@ -9,29 +9,28 @@ include '../_class/kunde_DBC.php';
 
 <div class="maincontent-area align-container">
     <br />
-	
-	<?php
 
+    <?php
 
- if (isset($_SESSION['anwender']))
- {
-	  var_dump ($_SESSION["anwender"]);
- }
- if(isset($_SESSION['ereignis']))
- {
-	 if ($_SESSION['ereignis'] == 4)
-	 {
-		  echo "<h2>Sie wurden erfolgreich Eingelogt<h2/>";
-		  unset($_SESSION['ereignis']);
-	 }
-	 elseif ($_SESSION['ereignis'] == 5)
-	 {
-		  echo "<h2>Sie wurden erfolgreich Registriert</br>Weitere Einstellungen finden sie in ihrem Profil<h2/>";
-		 unset($_SESSION['ereignis']);
-	 }
- }
-// exit;
-	?>
+    if (isset($_SESSION['anwender']))
+    {
+        var_dump ($_SESSION["anwender"]);
+    }
+    if(isset($_SESSION['ereignis']))
+    {
+        if ($_SESSION['ereignis'] == 4)
+        {
+            echo "<h2>Sie wurden erfolgreich Eingelogt<h2 />";
+            unset($_SESSION['ereignis']);
+        }
+        elseif ($_SESSION['ereignis'] == 5)
+        {
+            echo "<h2>Sie wurden erfolgreich Registriert</br>Weitere Einstellungen finden sie in ihrem Profil<h2 />";
+            unset($_SESSION['ereignis']);
+        }
+    }
+    // exit;
+    ?>
     <div id="titel-container">
 
         <!-- Start Alphabet A area -->
@@ -330,12 +329,12 @@ include '../_module/bottom.php';
 <!-- Start Cookie Plugin -->
 <script type="text/javascript">
     window.cookieconsent_options = {
-        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
-        dismiss: 'Ok, verstanden',
-        learnMore: 'Mehr Infos',
-        link: 'https://website-tutor.com/datenschutz',
-        theme: 'dark-bottom'
-    };
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml            ;nnen.',
+        dismiss: 'Ok, vers        tand        en',
+          learnMo            r  e : ' M ehr             I nfos'             ,
+                    link:                 ps ://w ebs                tutor.com/           e                 uz',
+                    t  'dark-botto m'
+    ;
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
 <!-- Ende Cookie Plugin -->

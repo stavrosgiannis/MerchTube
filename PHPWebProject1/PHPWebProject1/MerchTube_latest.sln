@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "PHPWebProject1", "..\..\..\..\..\..\Users\Stavros\Source\Repos\MerchTube\PHPWebProject1\PHPWebProject1\PHPWebProject1.phpproj", "{096C0C13-89AF-42B3-86E6-C0BE02A53921}"
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "MerchTube_latest", "MerchTube_latest.phpproj", "{E5FA5E1F-6AC8-44B8-B814-5923039E0751}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{096C0C13-89AF-42B3-86E6-C0BE02A53921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{096C0C13-89AF-42B3-86E6-C0BE02A53921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FA5E1F-6AC8-44B8-B814-5923039E0751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FA5E1F-6AC8-44B8-B814-5923039E0751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {178D404C-3C56-4EBA-9B76-55C261FB9CC8}
+		SolutionGuid = {57A923A4-A9AA-4258-AFFF-F6197761C8AA}
 	EndGlobalSection
 EndGlobal

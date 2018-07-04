@@ -116,13 +116,13 @@ class Anwender_DBC
             $mysqli-connect_errno;
 			exit;
 		}
-		
-		$sql = "INSERT INTO tbl_anwender (`id_anwender`, `vorname`, `nachname`, `email`, `passwort`, `anwender_name`, `profilbild_id`, `adresse_id`, `login`, `rechnung_id`, `geschaeftsanwender_id`, `partner_id`, `bankverbindung_id`, `salt`, `frage1`, `frage2`, `frage3`) 
+
+		$sql = "INSERT INTO tbl_anwender (`id_anwender`, `vorname`, `nachname`, `email`, `passwort`, `anwender_name`, `profilbild_id`, `adresse_id`, `login`, `rechnung_id`, `geschaeftsanwender_id`, `partner_id`, `bankverbindung_id`, `salt`, `frage1`, `frage2`, `frage3`)
 									VALUES (NULL, '$vorname', '$nachname', '$email', '$passwort', '$anwender_name', NULL, NULL, '0', NULL, NULL, NULL, NULL, '$salt', '$frage1', '$frage2', '$frage3')";
-		
+
 		print_r ($sql);
 		$result = $mysqli->query($sql);
-		
+
 		if ($result == 1)
 		{
 			return true;
@@ -345,9 +345,9 @@ class Anwender_DBC
 
 				if ($passwort == $row['passwort'])
 				{
-					
+
 					return true;
-				}	   
+				}
 			}
 
 			$result->free();
@@ -369,7 +369,7 @@ class Anwender_DBC
 		}
 
 		$sql = "SELECT * FROM tbl_anwender WHERE `anwender_name` = '$anwender_name' LIMIT 1;";
-		
+
 		$result = $mysqli->query($sql);
 		$row_cnt = $result->num_rows;
 
@@ -378,8 +378,8 @@ class Anwender_DBC
 			$ergebnis = true;
 		}
 		return $ergebnis;
-	}	
-	
+	}
+
 	static function suche($sucheingabe)
 	{
 		$ergebnis = false;
@@ -393,12 +393,12 @@ class Anwender_DBC
 			return $ergebnis;
 		}
 
-		$sql = "SELECT * 
-				FROM `tbl_artikel` 
+		$sql = "SELECT *
+				FROM `tbl_artikel`
 				WHERE bezeichnug LIKE '%$sucheingabe%';";
 		$result = $mysqli->query($sql);
 		$row_cnt = $result->num_rows;
-			echo"<div class=\"maincontent-area align-container\">";
+        echo"<div class=\"maincontent-area align-container\">";
 		if ( $row_cnt< 1)
 		{
 			$suchergebnis = NULL;
@@ -406,20 +406,20 @@ class Anwender_DBC
 			exit;
 		}
 		else
-		{	
+		{
 			echo "<h1>Suchergebnisse</h1>";
 			while($datensatz = $result->fetch_assoc())
 			{
 				echo "<tr>\r\n";
 				if( empty($datensatz['arikel_bild_id']) ){
 					echo"<img src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
-				} 
+				}
 				else{
 					echo"<img src=\"../_img/produkte/".$datensatz['	bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
 				}
-				 echo "<td>".$datensatz['bezeichnug']."</td>".
-						"<td>".$datensatz['preis']."</td>".
-						"<td>".$datensatz['beschriebung']."</td>";
+                echo "<td>".$datensatz['bezeichnug']."</td>".
+                "<td>".$datensatz['preis']."</td>".
+                "<td>".$datensatz['beschriebung']."</td>";
 			}
 			echo"</div>";
 		}

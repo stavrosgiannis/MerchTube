@@ -28,7 +28,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="warenkorb.php">
+                                <a href="shop-cart.php">
                                     <i class="fa fa-user"></i><?php echo $lang["Cart"]; ?>
                                 </a>
                             </li>
@@ -53,11 +53,10 @@
                             <?php
                             }
 
-                            ?>  
+                            ?>
                         </ul>
                     </div>
                 </div>
-							
 
                 <div class="col-md-4">
                     <div class="header-right">
