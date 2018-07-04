@@ -10,15 +10,14 @@
  */
 ?>
 
-<!--
-<div class="footer-top-area">
+<!--<div class="footer-top-area">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
                     <h2>
-                        MO
-                        <span>BOX</span>
+                        Merch
+                        <span>Tube</span>
                     </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                     <div class="footer-social">
@@ -98,9 +97,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- End footer top area -->
-<!--
+
 <div class="footer-bottom-area">
     <div class="container">
         <div class="row">
@@ -113,10 +112,10 @@
 
             <div class="col-md-4">
                 <div class="footer-card-icon">
-                    <i class="fa fa-cc-discover"></i>
-                    <i class="fa fa-cc-mastercard"></i>
-                    <i class="fa fa-cc-paypal"></i>
-                    <i class="fa fa-cc-visa"></i>
+                    <i class="fab fa-cc-discover"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-visa"></i>
                 </div>
             </div>
         </div>

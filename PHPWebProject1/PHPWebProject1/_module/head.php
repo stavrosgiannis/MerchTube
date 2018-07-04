@@ -31,6 +31,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../_css/style.css" />
     <link rel="stylesheet" href="../_css/responsive.css" />
+    <link rel="stylesheet" href="../_css/owl.carousel.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

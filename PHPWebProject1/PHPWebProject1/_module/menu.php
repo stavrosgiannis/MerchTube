@@ -24,7 +24,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a href="main.php">
+                        <a href="index.php">
                             <?php echo $lang["Home"]; ?>
                         </a>
                     </li>
@@ -47,6 +47,11 @@
                         <a href="#">
                             <?php echo $lang["Contact"]; ?>
                         </a>
+                    </li>                  
+					<li>
+                      <form action="suche_antwort.php" method="post">
+									<input name="sucheingabe" type="text" maxlength="100" placeholder="Suche...">
+							</form>
                     </li>
                 </ul>
             </div>
