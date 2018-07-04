@@ -81,7 +81,6 @@
     <Compile Include="_pages\registrierung_anfrage.php" />
     <Compile Include="_pages\registrierung_antwort.php" />
     <Compile Include="_pages\suche_antwort.php" />
-    <Compile Include="_pages\warenkorb.php" />
     <Compile Include="index.php" />
     <Compile Include="merchtube.sql" />
   </ItemGroup>
@@ -89,6 +88,7 @@
     <Folder Include="_class" />
     <Folder Include="_css" />
     <Folder Include="_fonts" />
+    <Folder Include="_img\werbung\" />
     <Folder Include="_img\produkte" />
     <Folder Include="_img" />
     <Folder Include="_js" />
@@ -97,6 +97,11 @@
     <Folder Include="_pages" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="_img\produkte\shirt.jpg" />
     <Content Include="_pages\shop-cart.php" />
+    <Content Include="_pages\shop-checkout1.php" />
+    <Content Include="_pages\shop-checkout2.php" />
+    <Content Include="_pages\shop-checkout3.php" />
+    <Content Include="_pages\shop-checkout4.php" />
   </ItemGroup>
 </Project>

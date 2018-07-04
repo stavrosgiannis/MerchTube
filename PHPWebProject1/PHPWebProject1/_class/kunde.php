@@ -9,6 +9,11 @@ class Anwender
 	public $nachname = "";
 	public $vorname = "";
 	public $email = "";
+    public $login = 0;
+    public $telefon = "";
+    public $frage1 = "";
+    public $frage2 = "";
+    public $frage3 = "";
 	public $rechnungsanschriftliste = null;
 	public $lieferanschriftliste = null;
 

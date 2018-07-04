@@ -17,7 +17,7 @@ class Anwender_DBC
             $mysqli-connect_errno;
 			exit;
 		}
-
+        $mysqli->set_charset("utf8");
 		$sql = "SELECT * FROM tbl_anwender WHERE anwender_name='$anwendername';";
 
 		if ($result = $mysqli->query($sql))
@@ -49,12 +49,17 @@ class Anwender_DBC
 				}
 
 				$anwender->id_anwender = $row["id_anwender"];
-				$anwender->anwendernname = $row["anwender_name"];
+				$anwender->anwendername = $row["anwender_name"];
 				$anwender->passwort = $row["passwort"];
 				$anwender->salt = $row["salt"];
 				$anwender->vorname = $row["vorname"];
 				$anwender->nachname = $row["nachname"];
 				$anwender->email = $row["email"];
+                $anwender->login = $row["login"];
+                $anwender->telefon = $row["telefon"];
+                $anwender->frage1 = $row["frage1"];
+                $anwender->frage2 = $row["frage2"];
+                $anwender->frage3 = $row["frage3"];
 
 				// Lese profilbild daten vom anwendern
 				$sql3 = "SELECT * FROM tbl_profilbild WHERE id_profilbild='". $row['profilbild_id'] ."';";
@@ -395,33 +400,33 @@ class Anwender_DBC
 
 		$sql = "SELECT *
 				FROM `tbl_artikel`
-				WHERE bezeichnug LIKE '%$sucheingabe%';";
+				WHERE bezeichnung LIKE '%$sucheingabe%';";
 		$result = $mysqli->query($sql);
 		$row_cnt = $result->num_rows;
         echo"<div class=\"maincontent-area align-container\">";
-		if ( $row_cnt< 1)
+		if ( $row_cnt < 1)
 		{
-			$suchergebnis = NULL;
-			echo"<h1>Keine Ergebnisse gefunden!!</h1>";
+
+			echo"<h1>Keine Ergebnisse gefunden!!</h1><hr />";
 			exit;
 		}
 		else
 		{
-			echo "<h1>Suchergebnisse</h1>";
+			echo "<h1>Suchergebnisse</h1><hr />";
 			while($datensatz = $result->fetch_assoc())
 			{
 				echo "<tr>\r\n";
-				if( empty($datensatz['arikel_bild_id']) ){
-					echo"<img src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+				if( empty($datensatz['artikel_bild']) ){
+					echo"<img style=\"height:15%;width:15%;\" src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"><br>";
 				}
 				else{
-					echo"<img src=\"../_img/produkte/".$datensatz['	bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+					echo"<img style=\"height:15%;width:15%;\" src=\"../_img/produkte/".$datensatz['artikel_bild']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"><br>";
 				}
-                echo "<td>".$datensatz['bezeichnug']."</td>".
-                "<td>".$datensatz['preis']."</td>".
-                "<td>".$datensatz['beschriebung']."</td>";
+                echo "<td>Bezeichung: ".$datensatz['bezeichnung']."</td><br>".
+                "<td>Preis: ".$datensatz['preis']."€</td><br>".
+                "<td>Beschreibung: ".$datensatz['beschreibung']."</td><br>";
 			}
-			echo"</div>";
+			echo"</div><hr />";
 		}
 	}
 

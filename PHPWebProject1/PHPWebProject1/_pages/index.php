@@ -314,26 +314,26 @@ include '../_class/kunde_DBC.php';
         <!-- End Alphabet J area -->
     </div>
 
-    <!--<div class="werbung-banner">
-            <h2>Werbung Banner</h2>
-            <p>420x800</p>
-            <img src="../_img/werbung/werbung.jpg" alt="Werbung" />
-        </div>-->
+    <div class="werbung-banner">
+        <h2>Werbung Banner</h2>
+        <p>420x800</p>
+        <img src="../_img/werbung/werbung.jpg" alt="Werbung" />
+    </div>
 </div>
 
 <?php
 // --------------------------------------------Bottom------------------------------------------------------------->
-
+include '../_module/loadscripts.php';
 include '../_module/bottom.php';
 ?>
 <!-- Start Cookie Plugin -->
 <script type="text/javascript">
     window.cookieconsent_options = {
-        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml            ;nnen.',
-        dismiss: 'Ok, vers        tand        en',
-          learnMo            r  e : ' M ehr             I nfos'             ,
-                    link:                 ps ://w ebs                tutor.com/           e                 uz',
-                    t  'dark-botto m'
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml                ;nnen.',
+        dismiss: 'Ok,         vers        tand          en',
+        learnMo            r  e: ' M ehr                          I nfos',
+        link: ps ://w ebs               tutor.com/           e                  uz',
+        'dark-botto m'
     ;
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>

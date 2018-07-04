@@ -32,7 +32,7 @@ include '../_class/kunde_DBC.php';
                 </div>-->
                 <div id="basket" class="col-lg-9">
                     <div class="box mt-0 pb-0 no-horizontal-padding">
-                        <form method="get" action="shop-checkout1.html">
+                        <form method="get" action="shop-checkout1.php">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -76,9 +76,9 @@ include '../_class/kunde_DBC.php';
 
                                                 if(empty($datensatz['arikel_bild_id']))
                                                 {
-                                                    echo '<img src="../_img/produkte/unset.jpg" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
+                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/unset.jpg" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
                                                 }else{
-                                                    echo '<img src="../_img/produkte/"'.$datensatz['artikel_bild'].'" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
+                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/"'.$datensatz['artikel_bild'].'" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
                                                 }
 
                                                 echo '</a>
@@ -184,5 +184,6 @@ include '../_class/kunde_DBC.php';
 <br />
 <?php
 // --------------------------------------------Bottom------------------------------------------------------------->
+include '../_module/loadscripts.php';
 include '../_module/bottom.php';
 ?>
