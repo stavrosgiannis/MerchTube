@@ -16,14 +16,14 @@
 		$mysqli->set_charset("utf8");
 //liste ALLES aus denm warenkorb und die atikel aus
 		$select_anweisung = "SELECT *
-								FROM tbl_warenkorb, tbl_artikel
-								WHERE artikel_id = id_artikel 
-								AND id_anwender = $anwender->id_anwender";
+								FROM tbl_warenkorb AS w, tbl_artikel AS a
+								WHERE w.artikel_id = a.id_artikel
+								AND w.anwender_id = $anwender->id_anwender";
 							 
-				 
-		$ergebnismenge = $mysqli->query($select_anweisung);
+		// echo "$select_anweisung";	 
+		// exit;
 		echo"<div class=\"maincontent-area align-container\">";
-		
+		if($ergebnismenge = $mysqli->query($select_anweisung)){
 		while($datensatz = $ergebnismenge->fetch_assoc())
 		{	
 	
@@ -43,13 +43,15 @@
 					echo "<td><img src=\"../_img/produkte/".$datensatz['arikel_bild_id']."\" alt=\"Kein Bild vorhanden\"></td>";
 				}
 				
-				echo"<form  action=\"loeschewarenkorbinhalt.php?typ='entfernen&id_artikel=".$datensatz['id_artikel']."'\" method=\"post\"> 
+				echo"
+				<form  action=\"../_module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel=".$datensatz['id_artikel']."\" method=\"post\"> 
 					<button class=\"Button\">Entfernen</button>
 				</form>".
-				"<td>".$datensatz['bezeichnung']."</td>".
-				"<td>".$datensatz['beschreibung']."</td>".
+				"<td>".$datensatz['bezeichnug']."</td>".
+				"<td>".$datensatz['beschriebung']."</td>".
 				"<td>".$datensatz['menge']."</td>".
 				"<td>$preis</td>";
+		}
 		}
 include '../_module/footer.php';
 ?>
