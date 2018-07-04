@@ -19,21 +19,23 @@
 	$frage2 =  $_POST['frage2'];
 	$frage3 =  $_POST['frage3'];
 	//Passwort hashen
-	$hash = hash('sha256', $passwort);
 	function createSalt()
 	{
 		$text = md5(uniqid(rand(), TRUE));
 		return substr($text, 0, 3);
 	}
 	$salt = createSalt();
-	$passwort = hash('sha256', $salt . $hash);
+	$passwort = hash('sha256', $salt . $passwort);
 	
 	if(Anwender_DBC::checkIfanwendernnameExists($anwender_name) == false){
 		
-		Anwender_DBC::registeranwender($vorname,$nachname,$email,$passwort,$anwender_name,$salt,$frage1,$frage2,$frage3);
-
+		if(Anwender_DBC::registeranwender($vorname,$nachname,$email,$passwort,$anwender_name,$salt,$frage1,$frage2,$frage3)){
 		$_SESSION['ereignis'] = 5;
 		header('Location: index.php');
+		} 
+		else{
+			echo"fehler";
+		}
 	}
 	else{
 		$_SESSION['ereignis'] = 3;

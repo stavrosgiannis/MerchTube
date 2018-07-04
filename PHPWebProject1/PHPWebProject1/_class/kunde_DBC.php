@@ -108,7 +108,6 @@ class Anwender_DBC
 
     public static function registeranwender($vorname,$nachname,$email,$passwort,$anwender_name,$salt,$frage1,$frage2,$frage3)
     {
-
 		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
 
 		if ($mysqli->connect_errno)
@@ -117,18 +116,17 @@ class Anwender_DBC
             $mysqli-connect_errno;
 			exit;
 		}
-
-		else
+		
+		$sql = "INSERT INTO tbl_anwender (`id_anwender`, `vorname`, `nachname`, `email`, `passwort`, `anwender_name`, `profilbild_id`, `adresse_id`, `login`, `rechnung_id`, `geschaeftsanwender_id`, `partner_id`, `bankverbindung_id`, `salt`, `frage1`, `frage2`, `frage3`) 
+									VALUES (NULL, '$vorname', '$nachname', '$email', '$passwort', '$anwender_name', NULL, NULL, '0', NULL, NULL, NULL, NULL, '$salt', '$frage1', '$frage2', '$frage3')";
+		
+		print_r ($sql);
+		$result = $mysqli->query($sql);
+		
+		if ($result == 1)
 		{
-			$sql = "INSERT INTO 'tbl_anwender' ('id_anwender', 'vorname', 'nachname', 'email', 'passwort', 'anwender_name', 'profilbild_id', 'adresse_id', 'login', 'rechnung_id', 'geschaeftsanwender_id', 'partner_id', 'bankverbindung_id', 'salt', 'frage1', 'frage2', 'frage3') 
-										VALUES (NULL, '$vorname', '$nachname', '$email', '$passwort', '$anwender_name', NULL, NULL, '0', NULL, NULL, NULL, NULL, '$salt', '$frage1', '$frage2', '$frage3')";
-			$result = $mysqli->query($sql);
-			
-			if ($result == 1)
-            {
-                return true;
-                exit;
-            }
+			return true;
+			exit;
 		}
         return false;
     }
@@ -342,9 +340,8 @@ class Anwender_DBC
 		{
 			if ($row = $result->fetch_assoc())
 			{
-				$hash = hash('sha256', $passwort );
 				$salt = $row['salt'];
-				$passwort = hash('sha256', $salt . $hash);
+				$passwort = hash('sha256', $salt . $passwort);
 				
 				if ($passwort == $row['passwort'])
 				{
@@ -374,7 +371,7 @@ class Anwender_DBC
 
 		$result = $mysqli->query($sql);
 		$row_cnt = $result->num_rows;
-		if ( $row_cnt> 0)
+		if ( $row_cnt > 0)
 		{
 			$ergbenis = true;
 		}
@@ -416,10 +413,10 @@ class Anwender_DBC
 			{
 				echo "<tr>\r\n";
 				if( empty($datensatz['arikel_bild_id']) ){
-					echo"<img src=\"../_img/producte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+					echo"<img src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
 				} 
 				else{
-					echo"<img src=\"../_img/producte/".$datensatz['	bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+					echo"<img src=\"../_img/produkte/".$datensatz['	bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
 				}
 				 echo "<td>".$datensatz['bezeichnug']."</td>".
 						"<td>".$datensatz['preis']."</td>".
