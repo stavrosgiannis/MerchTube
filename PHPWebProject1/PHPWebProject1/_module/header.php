@@ -28,7 +28,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="warenkorb.php">
                                     <i class="fa fa-user"></i><?php echo $lang["Cart"]; ?>
                                 </a>
                             </li>

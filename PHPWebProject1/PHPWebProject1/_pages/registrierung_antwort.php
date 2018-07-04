@@ -25,12 +25,29 @@
 		return substr($text, 0, 3);
 	}
 	$salt = createSalt();
-	$passwort = hash('sha256', $salt . $passwort);
+	$passwort = hash('sha256', $passwort . $salt);
 	
 	if(Anwender_DBC::checkIfanwendernnameExists($anwender_name) == false){
 		
 		if(Anwender_DBC::registeranwender($vorname,$nachname,$email,$passwort,$anwender_name,$salt,$frage1,$frage2,$frage3)){
 		$_SESSION['ereignis'] = 5;
+		//Profilbild hochladen
+		$filename = basename($_FILES['upload_image']['name']);
+			$extension = end(explode(".", $filename));
+			$uploaddir = '../img/profilbilder/';
+			$uploadfile = $uploaddir . $_FILES['upload_image']['name'] = $kunde->kundenname.".".$extension ;
+
+			echo '<pre>';
+			if (move_uploaded_file($_FILES['upload_image']['tmp_name'], $uploadfile)) {
+				echo "Datei ist valide und wurde erfolgreich hochgeladen.\n";
+			} else {
+				echo "Möglicherweise eine Dateiupload-Attacke!\n";
+			}
+
+			echo 'Weitere Debugging Informationen:';
+			print_r($_FILES);
+
+			print "</pre>";
 		header('Location: index.php');
 		} 
 		else{

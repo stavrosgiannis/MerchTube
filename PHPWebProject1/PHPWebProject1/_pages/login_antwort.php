@@ -25,25 +25,23 @@
 	$anwender_name = sichere_eingaben($mysqli, $_POST['anwender_name']);
 	$passwort = sichere_eingaben($mysqli, $_POST['passwort']);
 	
-	
-	
 	if (Anwender_DBC::checkIfanwendernnameExists($anwender_name))
 	{
 		if(Anwender_DBC::checkPasswort($anwender_name, $passwort))
 		{
-			$_SESSION['anwender'] = Anwender_DBC::loadbyanwendername($anwender_name);
+			$_SESSION['anwender'] = Anwender_DBC::loadByAnwendername($anwender_name);
 			$_SESSION['ereignis'] = 4;
 			header('Location: index.php');
 		}
 		else
 		{
 			$_SESSION['ereignis'] = 2;
-			header('Location: index.php');
+			header('Location: login_anfrage.php');
 			
 		}
 	}else
 	{
 		$_SESSION['ereignis'] = 6;
-			header('Location: index.php');
+			header('Location: login_anfrage.php');
 	}
 ?>

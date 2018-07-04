@@ -29,16 +29,6 @@ include '../_class/kunde_DBC.php';
 		  echo "<h2>Sie wurden erfolgreich Registriert</br>Weitere Einstellungen finden sie in ihrem Profil<h2/>";
 		 unset($_SESSION['ereignis']);
 	 }
-	 elseif ($_SESSION['ereignis'] == 6)
-	 {
-		  echo "<h2>Der Anwender Name ist falsch!<h2/>";
-		  unset($_SESSION['ereignis']);
-	 }
-	 elseif ($_SESSION['ereignis'] == 2)
-	 {
-		  echo "<h2>Das Passwort ist falsch!<h2/>";
-		  unset($_SESSION['ereignis']);
-	 }
  }
 // exit;
 	?>

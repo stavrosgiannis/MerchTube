@@ -9,14 +9,18 @@
 <div class="maincontent-area align-container">
 
 <?php
-if (isset($_SESSION['ereignis']))
-{
-	 if($_SESSION['ereignis'] == 2)
-	 {
-		 echo "<h1>Falsches Passwort</h1>";
-		 $_SESSION['ereignis'] = 0;
-	 }
-}
+	if(ISSET($_SESSION['ereignis'])){
+		 if ($_SESSION['ereignis'] == 6)
+		 {
+			  echo "<h2>Der Anwendername ist falsch!</h2>";
+			  unset($_SESSION['ereignis']);
+		 }
+		 elseif ($_SESSION['ereignis'] == 2)
+		 {
+			  echo "<h2>Das Passwort ist falsch!</h2>";
+			  unset($_SESSION['ereignis']);
+		 }
+	}
 ?>
 	<p>Bitte f&uuml;llen Sie die nachfolgenden Eingabefelder aus, um sich anzumelden:</p>
 	<form action="login_antwort.php" method="POST">

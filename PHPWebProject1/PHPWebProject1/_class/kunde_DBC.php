@@ -18,7 +18,7 @@ class Anwender_DBC
 			exit;
 		}
 
-		$sql = "SELECT * FROM tbl_anwender WHERE 'anwender_name'='$anwendername';";
+		$sql = "SELECT * FROM tbl_anwender WHERE anwender_name='$anwendername';";
 
 		if ($result = $mysqli->query($sql))
 		{
@@ -29,7 +29,7 @@ class Anwender_DBC
 					$anwender = new Geschaeftsanwender();
 
 					// lese auch die Geschäftsanwenderndaten
-					$sql2 = "SELECT * FROM tbl_geschaeftsanwender WHERE 'id_geschaeftsanwender'='". $row["geschaeftsanwender_id"] ."';";
+					$sql2 = "SELECT * FROM tbl_geschaeftsanwender WHERE id_geschaeftsanwender ='". $row["geschaeftsanwender_id"] ."';";
 
 					if ($result2 = $mysqli->query($sql2))
 					{
@@ -57,7 +57,7 @@ class Anwender_DBC
 				$anwender->email = $row["email"];
 
 				// Lese profilbild daten vom anwendern
-				$sql3 = "SELECT * FROM tbl_profilbild WHERE 'id_profilbild'='". $row['profilbild_id'] ."';";
+				$sql3 = "SELECT * FROM tbl_profilbild WHERE id_profilbild='". $row['profilbild_id'] ."';";
 
 				if ($result3 = $mysqli->query($sql3))
 				{
@@ -72,7 +72,7 @@ class Anwender_DBC
 				}
 
 				// lese alle zum anwendern gehörigen Liefer- und Rechnungsanschriften
-				$sql2 = "SELECT * FROM tbl_adresse WHERE 'id_adresse'='". $row["adresse_id"] ."';";
+				$sql2 = "SELECT * FROM tbl_adresse WHERE id_adresse='". $row["adresse_id"] ."';";
 
 				if ($result2 = $mysqli->query($sql2))
 				{
@@ -334,17 +334,18 @@ class Anwender_DBC
 			return false;
 		}
 
-		$sql = "SELECT passwort, salt FROM tbl_anwender WHERE 'anwender_name'='$anwender_name';";
+		$sql = "SELECT * FROM tbl_anwender WHERE `anwender_name` = '$anwender_name';";
 
 		if ($result = $mysqli->query($sql))
 		{
 			if ($row = $result->fetch_assoc())
 			{
 				$salt = $row['salt'];
-				$passwort = hash('sha256', $salt . $passwort);
-				
+				$passwort = hash('sha256', $passwort . $salt);
+
 				if ($passwort == $row['passwort'])
 				{
+					
 					return true;
 				}	   
 			}
@@ -367,16 +368,14 @@ class Anwender_DBC
 			return false;
 		}
 
-		$sql = "SELECT * FROM tbl_anwender WHERE 'anwender_name'='$anwender_name' LIMIT 1;";
-
+		$sql = "SELECT * FROM tbl_anwender WHERE `anwender_name` = '$anwender_name' LIMIT 1;";
+		
 		$result = $mysqli->query($sql);
 		$row_cnt = $result->num_rows;
+
 		if ( $row_cnt > 0)
 		{
-			$ergbenis = true;
-		}
-		else{
-			$ergbenis = false;
+			$ergebnis = true;
 		}
 		return $ergebnis;
 	}	
