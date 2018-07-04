@@ -28,12 +28,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="warenkorb.php">
                                     <i class="fa fa-user"></i><?php echo $lang["Cart"]; ?>
                                 </a>
                             </li>
                             <?php
-                            if (isset($_SESSION['kunde']))
+                            if (isset($_SESSION['anwender']))
                             { ?>
                             <li>
                                 <a href="logout.php">
@@ -46,17 +46,18 @@
                             else
                             { ?>
                             <li>
-                                <a href="login.php">
+                                <a href="login_anfrage.php">
                                     <i class="fa fa-user"></i><?php echo $lang["Login"]; ?>
                                 </a>
                             </li>
                             <?php
                             }
 
-                            ?>
+                            ?>  
                         </ul>
                     </div>
                 </div>
+							
 
                 <div class="col-md-4">
                     <div class="header-right">

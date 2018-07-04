@@ -47,6 +47,11 @@
                         <a href="#">
                             <?php echo $lang["Contact"]; ?>
                         </a>
+                    </li>                  
+					<li>
+                      <form action="suche_antwort.php" method="post">
+									<input name="sucheingabe" type="text" maxlength="100" placeholder="Suche...">
+							</form>
                     </li>
                 </ul>
             </div>

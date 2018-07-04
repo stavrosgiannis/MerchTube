@@ -23,11 +23,19 @@
 <!-- jQuery easing -->
 <script src="../_js/jquery.easing.1.3.min.js"></script>
 <script src="../_js/imagesloaded.pkgd.min.js"></script>
+<<<<<<< HEAD
+=======
 
+<!-- Main Script -->
+<script src="../_js/main.js"></script>
+>>>>>>> origin/Marius
+
+<!-- Slider -->
 <!-- Main Script -->
 <script src="../_js/main.js"></script>
 
 <!-- Slider -->
+<<<<<<< HEAD
 <!-- Main Script -->
 <script src="../_js/main.js"></script>
 
@@ -47,3 +55,7 @@
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
 <!-- Ende Cookie Plugin -->
+=======
+<script type="text/javascript" src="../_js/bxslider.min.js"></script>
+<script type="text/javascript" src="../_js/script.slider.js"></script>
+>>>>>>> origin/Marius

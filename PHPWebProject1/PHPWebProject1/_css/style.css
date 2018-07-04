@@ -29,6 +29,7 @@
             color: #f1f1f1;
         }
 
+<<<<<<< HEAD
 .banner-container {
     height: 400px;
     width: 1200px;
@@ -54,6 +55,11 @@
 .werbung-banner {
     /*margin-top: -46%;*/
     margin-left: 1200px;
+=======
+.werbung-banner {
+    /*margin-top: -46%;*/
+    margin-left: 1190px;
+>>>>>>> origin/Marius
     height: 800px;
     width: 36%;
     border: solid 1px;
