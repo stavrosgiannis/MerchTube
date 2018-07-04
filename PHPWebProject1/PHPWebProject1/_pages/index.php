@@ -48,8 +48,8 @@ include '../_module/top.php';
                     <div class="col-md-12">
                         <div class="brand-wrapper">
                             <div class="brand-list">
-                                <a href="#">
-                                    <img src="../_img/brand1.png" alt="" title="Nokia" />
+                                <a href="channel.php">
+                                    <img src="../_img/brand1.png" alt="" title="Channel" />
                                 </a>
                                 <img src="../_img/brand2.png" alt="" />
                                 <img src="../_img/brand3.png" alt="" />
@@ -328,18 +328,6 @@ include '../_module/top.php';
 
 <?php
 // --------------------------------------------Bottom------------------------------------------------------------->
-
+include '../_moduleloadscripts.php';
 include '../_module/bottom.php';
 ?>
-<!-- Start Cookie Plugin -->
-<script type="text/javascript">
-    window.cookieconsent_options = {
-        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
-        dismiss: 'Ok, verstanden',
-        learnMore: 'Mehr Infos',
-        link: 'https://website-tutor.com/datenschutz',
-        theme: 'dark-bottom'
-    };
-</script>
-<script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
-<!-- Ende Cookie Plugin -->

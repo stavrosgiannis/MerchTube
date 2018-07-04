@@ -13,7 +13,7 @@ if (isset($_SESSION['kunde']) && ($_SESSION['kunde'] != null))
 ?>
 
 <!-- Page content -->
-  <div class="maincontent-area">
+  <div class="maincontent-area align-container">
     <div class="container">
 		<div id="login">
 			<!--<img id="profil_bild" src="../img2/kundenavatar.jpg" alt="Error"></img>-->

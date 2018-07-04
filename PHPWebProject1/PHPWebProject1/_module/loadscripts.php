@@ -34,3 +34,16 @@
 <!-- Slider -->
 <script type="text/javascript" src="../_js/bxslider.min.js"></script>
 <script type="text/javascript" src="../_js/script.slider.js"></script>
+
+<!-- Start Cookie Plugin -->
+<script type="text/javascript">
+    window.cookieconsent_options = {
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
+        dismiss: 'Ok, verstanden',
+        learnMore: 'Mehr Infos',
+        link: 'https://website-tutor.com/datenschutz',
+        theme: 'dark-bottom'
+    };
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
+<!-- Ende Cookie Plugin -->

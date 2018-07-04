@@ -32,8 +32,10 @@
     <Compile Include="_module\menu.php" />
     <Compile Include="_module\sidebar.php" />
     <Compile Include="_module\top.php" />
+    <Compile Include="_pages\bestellprozess.php" />
     <Compile Include="_pages\impressum.php" />
     <Compile Include="_pages\index.php" />
+    <Compile Include="_pages\channel.php" />
     <Compile Include="_pages\login.php" />
     <Compile Include="_pages\login_antwort.php" />
     <Compile Include="_pages\logout.php" />
