@@ -1,10 +1,20 @@
 <?php
 //include die werte der datenbank
+	
+	include_once '../_module/function.php';
+	include_once '../_class/Kunde_DBC.php';
+	include_once '../_class/db.php';
 	session_start();
-	include '../_module/db.php';
 /****************************************************************		Entfernen		*************************************************************/
 if($_GET['typ'] == 'entfernen')
 {
+	$anwender = $_SESSION['anwender'];
+	$artikel = $_GET['id_artikel'];
+	$id_anwender = $anwender->id_anwender;
+	
+	// var_dump ($anwender);
+	// echo "<br>$artikel";
+	// echo "<br>$id_anwender";
 	//conection zur datenbank
 	$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
 	//ausgabe wenn es nicht funktioniert
@@ -19,8 +29,7 @@ if($_GET['typ'] == 'entfernen')
 //hier wird nur der artikel des anwenders samt seiner angaben aus dem wahrenkorg geworfen JEDER 
 //ARTIKEL IM WAHREN KORB HAT EINEN KNOPF DAMIT MAN NICHT ALLES AUF EINMAL LÖSCHT DAFÜR SORGT DIE ID ARTIKEL
 
-	$delete = "DELETE FROM tbl_warenkorb WHERE artikel_id=".$_GET['id_artikel']." AND anwender_id=".$_SESSION['anwender']->id_anwender."";
-	
+	$delete = "delete from tbl_warenkorb WHERE artikel_id=$artikel AND anwender_id=$id_anwender";
 	$mysqli->query($delete);
 //nach ausführung leitet es dih zur warenkorb seite weiter .
 	header("Location: ../_pages/warenkorb.php");
@@ -68,4 +77,5 @@ if($_GET['typ'] == 'entfernenminuseins')
 		$_SESSION['entfernen_error'] = 1;
 		//HIER MUSS UMBEDINGT DIE SEITE DES PRODUKTES REIN-:im moment ist als platzhalter die start seite drin//
 		header("Location: ../_pages/warenkorb.php");
+	}
 ?>
