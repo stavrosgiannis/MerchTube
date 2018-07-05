@@ -417,10 +417,10 @@ class Anwender_DBC
 			{
 				echo "<tr>\r\n";
 				if( empty($datensatz['artikel_bild']) ){
-					echo"<img style=\"height:15%;width:15%;\" src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"><br>";
+					echo"<a href=\"artikel_details.php?artikelnummer=".$datensatz['artikelnummer']."\"><img style=\"height:15%;width:15%;\" src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\"><br><a href=\"#\">";
 				}
 				else{
-					echo"<img style=\"height:15%;width:15%;\" src=\"../_img/produkte/".$datensatz['artikel_bild']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"><br>";
+					echo"<a href=\"artikel_details.php?artikelnummer=".$datensatz['artikelnummer']."\"><img style=\"height:15%;width:15%;\" src=\"../_img/produkte/".$datensatz['artikel_bild']."\" alt=\"Kein Bild Gefunden\"><br>";
 				}
                 echo "<td>Bezeichung: ".$datensatz['bezeichnung']."</td><br>".
                 "<td>Preis: ".$datensatz['preis']."€</td><br>".

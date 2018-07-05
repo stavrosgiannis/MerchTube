@@ -41,6 +41,17 @@ class Adresse
 	public $land = "";
 	public $typ = "R";
 }
+class Warenkorb
+{
+	public $id_artikel = -1;
+	public $bezeichnung = "";
+	public $beschreibung = "";
+	public $preis = "";
+	public $status = "";
+	public $artikel_bild = "";
+	public $artikelnummer = "";
+    public $menge = "";
+}
 
 class Profilbild
 {

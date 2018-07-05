@@ -1,7 +1,8 @@
 <?php
 //---------------------------------------------Top Modul wird includiert-------------------------------------------------------------
 include '../_module/top.php';
-include '../_class/kunde_DBC.php';
+include_once '../_class/kunde_DBC.php';
+
 ?>
 
 <div class="top-space"></div>
@@ -64,6 +65,10 @@ include '../_class/kunde_DBC.php';
 								                            FROM tbl_warenkorb AS w, tbl_artikel AS a
 								                            WHERE w.artikel_id = a.id_artikel
 								                            AND w.anwender_id = $anwender->id_anwender";
+                                        if (isset($_SESSION['warenkorb']))
+                                        {
+                                            unset($_SESSION['warenkorb']);
+                                        }
                                         if($ergebnismenge = $mysqli->query($select_anweisung)){
                                             while($datensatz = $ergebnismenge->fetch_assoc())
                                             {
@@ -72,19 +77,19 @@ include '../_class/kunde_DBC.php';
 
                                                 echo '<tr>
                                                     <td>
-                                                        <a href="#">';
+                                                        <a href="artikel_details.php?artikelnummer='.$datensatz['artikelnummer'].'">';
 
-                                                if(empty($datensatz['arikel_bild_id']))
+                                                if(empty($datensatz['artikel_bild']))
                                                 {
-                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/unset.jpg" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
+                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/unset.jpg" alt="'.$datensatz['bezeichnung'].'" class="img-fluid" /></a>';
                                                 }else{
-                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/"'.$datensatz['artikel_bild'].'" alt="'.$datensatz['bezeichnug'].'" class="img-fluid" />';
+                                                    echo '<img style="height:17%;width:17%;" src="../_img/produkte/'.$datensatz['artikel_bild'].'" alt="'.$datensatz['bezeichnung'].'" class="img-fluid" /></a>';
                                                 }
 
                                                 echo '</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#">'.$datensatz['bezeichnug'].'</a>
+                                                        <a href="artikel_details.php?artikelnummer='.$datensatz['artikelnummer'].'">'.$datensatz['bezeichnung'].'</a>
                                                     </td>
                                                     <td>
                                                         <input type="number" value="'.$datensatz['menge'].'" class="form-control" />
@@ -102,16 +107,37 @@ include '../_class/kunde_DBC.php';
                                                         </td>
                                                 </tr>';
 
+                                                $warenkorb = new Warenkorb();
+                                                $warenkorb->id_artikel = $datensatz['id_artikel'];
+                                                $warenkorb->bezeichnung = $datensatz['bezeichnung'];
+                                                $warenkorb->beschreibung = $datensatz['beschreibung'];
+                                                $warenkorb->artikel_bild = $datensatz['artikel_bild'];
+                                                $warenkorb->artikelnummer = $datensatz['artikelnummer'];
+                                                $warenkorb->menge = $datensatz['menge'];
+                                                $warenkorb->preis = $datensatz['preis'];
+
+                                                $_SESSION['warenkorb'][] = $warenkorb;
+
                                             }
                                         }
-
+                                        var_dump ($_SESSION['warenkorb']);
                                         ?>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th colspan="5">Total</th>
                                             <th colspan="2">
-                                                4545€
+                                                <?php
+                                                global $summe;
+                                                foreach ($_SESSION['warenkorb'] as $value)
+                                                {
+                                                    echo $summe;
+                                                    //var_dump ($value);
+                                                	$summe = (($value->preis * $value->menge));
+
+                                                }
+
+                                                ?>€
                                             </th>
                                         </tr>
                                     </tfoot>
@@ -122,6 +148,7 @@ include '../_class/kunde_DBC.php';
                                     <button class="btn btn-secondary">
                                         <i class="fa fa-refresh"></i> Update cart
                                     </button>
+
                                     <button type="submit" class="btn btn-template-outlined">
                                         Proceed to checkout
                                         <i class="fa fa-chevron-right"></i>

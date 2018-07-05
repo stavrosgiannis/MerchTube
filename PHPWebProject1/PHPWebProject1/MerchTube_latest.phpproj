@@ -97,6 +97,7 @@
     <Folder Include="_pages" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="_img\produkte\pullover.jpg" />
     <Content Include="_img\produkte\shirt.jpg" />
     <Content Include="_pages\shop-cart.php" />
     <Content Include="_pages\shop-checkout1.php" />

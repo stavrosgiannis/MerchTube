@@ -102,7 +102,7 @@ include '../_class/kunde_DBC.php';
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <!--<div class="col-lg-3">
                     <div id="order-summary" class="box mb-4 p-0">
                         <div class="box-header mt-0">
                             <h3>Order summary</h3>
@@ -130,7 +130,7 @@ include '../_class/kunde_DBC.php';
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

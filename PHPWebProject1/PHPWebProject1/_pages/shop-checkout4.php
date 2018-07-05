@@ -69,39 +69,38 @@ include '../_class/kunde_DBC.php';
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <?php
+
+                                        $warenkorb = $_SESSION['warenkorb'];
+
+                                        $i = 0;
+                                        foreach ($warenkorb as $value)
+                                        {
+                                            $summe = ($warenkorb[$i]->menge * $warenkorb[$i]->preis);
+                                            echo ' <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="img/detailsquare.jpg" alt="White Blouse Armani" />
+                                                    <img src="../_img/produkte/'.$warenkorb[$i]->artikel_bild.'" alt="'.$warenkorb[$i]->bezeichnung.'" />
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="#">White Blouse Armani</a>
+                                                <a href="#">'.$warenkorb[$i]->bezeichnung.'</a>
                                             </td>
-                                            <td>2</td>
-                                            <td>$123.00</td>
-                                            <td>$0.00</td>
-                                            <td>$246.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    <img src="img/basketsquare.jpg" alt="Black Blouse Armani" />
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="#">Black Blouse Armani</a>
-                                            </td>
-                                            <td>1</td>
-                                            <td>$200.00</td>
-                                            <td>$0.00</td>
-                                            <td>$200.00</td>
-                                        </tr>
+                                            <td>'.$warenkorb[$i]->menge.'</td>
+                                            <td>'.$warenkorb[$i]->preis.'EUR</td>
+                                            <td>0.00EUR</td>
+                                            <td>'.$summe.'EUR</td>
+                                        </tr>';
+                                            var_dump($warenkorb[$i]);
+                                            $i++;
+                                        }
+
+                                        ?>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th colspan="5">Total</th>
-                                            <th>$446.00</th>
+                                            <th>446.00EUR</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -122,7 +121,7 @@ include '../_class/kunde_DBC.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <!--<div class="col-lg-3">
                     <div id="order-summary" class="box mb-4 p-0">
                         <div class="box-header mt-0">
                             <h3>Order summary</h3>
@@ -150,7 +149,7 @@ include '../_class/kunde_DBC.php';
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
