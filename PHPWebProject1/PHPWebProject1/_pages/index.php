@@ -323,18 +323,18 @@ include '../_class/kunde_DBC.php';
 
 <?php
 // --------------------------------------------Bottom------------------------------------------------------------->
-include '../_module/loadscripts.php';
+//include '../_module/loadscripts.php';
 include '../_module/bottom.php';
 ?>
 <!-- Start Cookie Plugin -->
 <script type="text/javascript">
     window.cookieconsent_options = {
-        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml                ;nnen.',
-        dismiss: 'Ok,         vers        tand          en',
-        learnMo            r  e: ' M ehr                          I nfos',
-        link: ps ://w ebs               tutor.com/           e                  uz',
-        'dark-botto m'
-    ;
+        message: 'Diese Website nutzt Cookies, um bestm&ouml;gliche Funktionalit&auml;t bieten zu k&ouml;nnen.',
+        dismiss: 'Ok, verstanden',
+        learnMore: 'Mehr Infos',
+        link: 'https://website-tutor.com/datenschutz',
+        theme: 'dark-bottom'
+    };
 </script>
 <script type="text/javascript" src="//s3.amazonaws.com/valao-cloud/cookie-hinweis/script-v2.js"></script>
 <!-- Ende Cookie Plugin -->
