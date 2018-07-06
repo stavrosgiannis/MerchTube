@@ -52,6 +52,7 @@ class Anwender_DBC
 				$anwender->anwendernname = $row["anwender_name"];
 				$anwender->passwort = $row["passwort"];
 				$anwender->salt = $row["salt"];
+				$anwender->login = $row["login"];
 				$anwender->vorname = $row["vorname"];
 				$anwender->nachname = $row["nachname"];
 				$anwender->email = $row["email"];
@@ -407,22 +408,24 @@ class Anwender_DBC
 		}
 		else
 		{	
-			echo "<h1>Suchergebnisse</h1>";
+			echo "<h1>Suchergebnisse</h1><hr><table style=\"border: solid 1px black\">";
 			while($datensatz = $result->fetch_assoc())
 			{
 				echo "<tr>\r\n";
-				if( empty($datensatz['arikel_bild_id']) ){
-					echo"<img src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+				if(empty($datensatz['bildpfadname']) ){
+					echo"<td style=\"border: solid 1px black\"><img src=\"../_img/produkte/unset.jpg\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"></td>";
 				} 
 				else{
-					echo"<img src=\"../_img/produkte/".$datensatz['	bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\">";
+					echo"<td style=\"border: solid 1px black\"><img src=\"../_img/produkte/".$datensatz['bildpfadname']."\" alt=\"Kein Bild Gefunden\" height=\"42px\" width=\"42px\"></td>";
 				}
-				 echo "<td>".$datensatz['bezeichnug']."</td>".
-						"<td>".$datensatz['preis']."</td>".
-						"<td>".$datensatz['beschriebung']."</td>";
+				 echo "<td style=\"border: solid 1px black\">".$datensatz['bezeichnug']."</td>".
+						"<td style=\"border: solid 1px black\">".$datensatz['preis']."</td>".
+						"<td style=\"border: solid 1px black\">".$datensatz['beschriebung']."</td>";
+						echo"</tr>";
 			}
-			echo"</div>";
+			echo"</table></div>";
 		}
 	}
 
 }
+?>

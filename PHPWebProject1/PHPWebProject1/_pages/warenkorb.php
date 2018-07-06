@@ -1,7 +1,6 @@
 <?php
 //---------------------------------------------Top Modul wird includiert-------------------------------------------------------------
 	include '../_module/top.php';
-
 // --------------------------------------------Bottom------------------------------------------------------------->
 		//datenbank connect 
 		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
@@ -23,35 +22,33 @@
 		// echo "$select_anweisung";	 
 		// exit;
 		echo"<div class=\"maincontent-area align-container\">";
-		if($ergebnismenge = $mysqli->query($select_anweisung)){
+		if($ergebnismenge = $mysqli->query($select_anweisung)){	
+				echo"<table style=\"border: solid 1px black; margin-right:20px\">
+					<tr>
+						<th>Bild</th><th>Produkt</th><th>Beschreibung</th><th>Menge</th><th>Preis</th><th>Entfernen</th></tr><tr>";
 		while($datensatz = $ergebnismenge->fetch_assoc())
 		{	
 	
-	//falls 2 mal das gleiche produkt da ist soll auch der preis demendsprechend verhalten und sich erhöhen
-	
 		$preis = $datensatz['preis']*$datensatz['menge'];
-			echo "<tr>\r\n";
+
+					//falls kein bild vorhanden ist für den artikel gib einen platzhalter aber wenn ein arikel bild da ist hole dir das bild aus der datenbank raus und aus dem _img/prdukte 
 					
-					//falls kein bild vorhanden ist für den artikel gib einen platzhalter
-					//aber wenn ein arikel bild da ist hole dir das
-					//bild aus der datenbank raus und aus dem _img/prdukte 
-					
-				if(empty($datensatz['arikel_bild_id'])){
-					echo "<td><img src=\"../_img/produkte/unset.jpg\" alt=\"ERROR\"></td>";
+				if(empty($datensatz['bildpfadname'])){
+					echo "<td style=\"border: solid 1px black\"><img src=\"../_img/produkte/unset.jpg\" alt=\"ERROR\"></td>";
 				}
 				else{
-					echo "<td><img src=\"../_img/produkte/".$datensatz['arikel_bild_id']."\" alt=\"Kein Bild vorhanden\"></td>";
+					echo "<td style=\"border: solid 1px black\"><img src=\"../_img/produkte/".$datensatz['bildpfadname']."\" alt=\"Kein Bild vorhanden\" height=\"42\" width=\"42\"></td>";
 				}
 				
-				echo"
-				<form  action=\"../_module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel=".$datensatz['id_artikel']."\" method=\"post\"> 
-					<button class=\"Button\">Entfernen</button>
-				</form>".
-				"<td>".$datensatz['bezeichnug']."</td>".
-				"<td>".$datensatz['beschriebung']."</td>".
-				"<td>".$datensatz['menge']."</td>".
-				"<td>$preis</td>";
+				echo
+				"<td style=\"border: solid 1px black\">".$datensatz['bezeichnug']."</td>".
+				"<td style=\"border: solid 1px black\">".$datensatz['beschriebung']."</td>".
+				"<td style=\"border: solid 1px black\">".$datensatz['menge']."</td>".
+				"<td style=\"border: solid 1px black\">$preis</td>".
+				"<td style=\"border: solid 1px black\"><a href=\"../_module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel=".$datensatz['id_artikel']."\">Entfernen</a></td>";
+				echo"</tr>";
 		}
+		echo"</table><hr>";
 		}
 include '../_module/footer.php';
 ?>

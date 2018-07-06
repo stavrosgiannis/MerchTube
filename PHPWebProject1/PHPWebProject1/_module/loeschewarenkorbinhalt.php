@@ -27,7 +27,6 @@ if($_GET['typ'] == 'entfernen')
 		$mysqli->set_charset("utf8");
 		
 //hier wird nur der artikel des anwenders samt seiner angaben aus dem wahrenkorg geworfen JEDER 
-//ARTIKEL IM WAHREN KORB HAT EINEN KNOPF DAMIT MAN NICHT ALLES AUF EINMAL LÖSCHT DAFÜR SORGT DIE ID ARTIKEL
 
 	$delete = "delete from tbl_warenkorb WHERE artikel_id=$artikel AND anwender_id=$id_anwender";
 	$mysqli->query($delete);

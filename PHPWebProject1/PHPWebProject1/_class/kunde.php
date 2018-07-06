@@ -7,6 +7,7 @@ class Anwender
 	public $passwort = "";
 	public $salt = "";
 	public $nachname = "";
+	public $login = "";
 	public $vorname = "";
 	public $email = "";
 	public $rechnungsanschriftliste = null;

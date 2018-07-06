@@ -4,7 +4,9 @@
 <?php
 	include_once '../_class/kunde.php';
 	set_include_path ('.');
-	session_start();
+	if(session_id() == ''){
+		session_start();
+	}
 	include 'head.php';
 	include_once '../_module/function.php';
 	include_once '../_class/db.php';

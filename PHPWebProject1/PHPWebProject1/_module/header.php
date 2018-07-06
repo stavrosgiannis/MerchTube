@@ -7,7 +7,16 @@
  *
  * @version 1.0
  * @author Stavros
- */
+ */					
+ if (isset($_SESSION['anwender']))
+ {
+	$anwender = $_SESSION['anwender'];
+	$login = $anwender->login;
+ }		
+ else{
+	$login = 0;
+ }
+
 ?>
 
 <header>
@@ -51,9 +60,15 @@
                                 </a>
                             </li>
                             <?php
-                            }
-
-                            ?>  
+								}
+							?>                
+							<li>
+							<?php
+								if($login == 1){
+									echo"<a href=\"admintools.php?typ=tool\"><i class=\"fa fa-user\"></i> Admintool</a>";
+								}
+							?>
+                            </li> 
                         </ul>
                     </div>
                 </div>
