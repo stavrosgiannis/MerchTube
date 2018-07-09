@@ -1,7 +1,6 @@
 <?php
 //---------------------------------------------Top Modul wird includiert-------------------------------------------------------------
 include '../_module/top.php';
-include '../_class/kunde_DBC.php';
 
 ?>
 
@@ -15,6 +14,7 @@ include '../_class/kunde_DBC.php';
     if (isset($_SESSION['anwender']))
     {
         var_dump ($_SESSION["anwender"]);
+        print_r ($_SESSION["anwender"]->vorname);
     }
     if(isset($_SESSION['ereignis']))
     {
@@ -323,7 +323,6 @@ include '../_class/kunde_DBC.php';
 
 <?php
 // --------------------------------------------Bottom------------------------------------------------------------->
-//include '../_module/loadscripts.php';
 include '../_module/bottom.php';
 ?>
 <!-- Start Cookie Plugin -->

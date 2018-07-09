@@ -6,10 +6,10 @@ include_once '../_module/function.php';
 include_once '../_class/db.php';
 include_once '../_class/kunde_DBC.php';
 $mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
-if (isset($_SESSION['anwender_name']) AND isset($_SESSION['id_anwender']))
+if (isset($_SESSION['anwender']))
 {
     //verweist auf die Hauptseite, da der Kunde bereits eingeloggt ist
-    header('Location: main.php');
+    header('Location: index.php');
     exit;
 }
 
