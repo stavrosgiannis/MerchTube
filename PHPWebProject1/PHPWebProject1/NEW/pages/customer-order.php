@@ -12,10 +12,10 @@ include '../module/top.php';
             <div class="col-md-5">
                 <ul class="breadcrumb d-flex justify-content-end">
                     <li class="breadcrumb-item">
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="customer-orders.html">My Orders</a>
+                        <a href="customer-orders.php">My Orders</a>
                     </li>
                     <li class="breadcrumb-item active">Order # 1735</li>
                 </ul>
@@ -34,7 +34,7 @@ include '../module/top.php';
                 </p>
                 <p class="lead text-muted">
                     If you have any questions, please feel free to
-                    <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.
+                    <a href="contact.php">contact us</a>, our customer service center is working for you 24/7.
                 </p>
                 <div class="box">
                     <div class="table-responsive">
@@ -133,22 +133,17 @@ include '../module/top.php';
                     <div class="panel-body">
                         <ul class="nav nav-pills flex-column text-sm">
                             <li class="nav-item">
-                                <a href="customer-orders.html" class="nav-link active">
+                                <a href="customer-orders.php" class="nav-link active">
                                     <i class="fa fa-list"></i> My orders
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="customer-wishlist.html" class="nav-link">
-                                    <i class="fa fa-heart"></i> My wishlist
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="customer-account.html" class="nav-link">
+                                <a href="customer-account.php" class="nav-link">
                                     <i class="fa fa-user"></i> My account
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="index.html" class="nav-link">
+                                <a href="index.php" class="nav-link">
                                     <i class="fa fa-sign-out"></i> Logout
                                 </a>
                             </li>

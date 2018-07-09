@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //---------------------------------------------Top Modul wird includiert-------------------------------------------------------------
 include '../module/top.php';
 include '../class/kunde_DBC.php';

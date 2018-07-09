@@ -273,8 +273,6 @@
     <Content Include="NEW\pages\blog-small.html" />
     <Content Include="NEW\pages\blog.html" />
     <Content Include="NEW\pages\contact.php" />
-    <Content Include="NEW\pages\contact2.html" />
-    <Content Include="NEW\pages\contact3.html" />
     <Content Include="NEW\pages\credits.txt" />
     <Content Include="NEW\css\custom.css" />
     <Content Include="NEW\css\style.blue.css" />

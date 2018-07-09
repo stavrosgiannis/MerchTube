@@ -25,7 +25,7 @@
             </button>
             <div id="navigation" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown">
                         <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">
                             Home
                             <b class="caret"></b>

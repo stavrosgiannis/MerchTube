@@ -1,9 +1,9 @@
 <?php
 //include die werte der datenbank
 
-include_once '../_module/function.php';
-include_once '../_class/Kunde_DBC.php';
-include_once '../_class/db.php';
+include_once '../module/function.php';
+include_once '../class/Kunde_DBC.php';
+include_once '../class/db.php';
 session_start();
 /****************************************************************		Entfernen		*************************************************************/
 if($_GET['typ'] == 'entfernen')
@@ -32,7 +32,7 @@ if($_GET['typ'] == 'entfernen')
 	$delete = "delete from tbl_warenkorb WHERE artikel_id=$artikel AND anwender_id=$id_anwender";
 	$mysqli->query($delete);
     //nach ausführung leitet es dih zur warenkorb seite weiter .
-	header("Location: ../pages/warenkorb.php");
+	header("Location: ../pages/shop-basket.php");
 }
 
 /****************************************************************		Entfernen		*************************************************************/
@@ -68,12 +68,12 @@ if($_GET['typ'] == 'entfernenminuseins')
 		$mysqli->query($update);
 	}
 	//überpruefen auf php name .ansonsten auch hier ändern//
-	header("Location: ../pages/shop-cart.php");
+	header("Location: ../pages/shop-basket.php");
 }
 else
 {
     $_SESSION['entfernen_error'] = 1;
     //HIER MUSS UMBEDINGT DIE SEITE DES PRODUKTES REIN-:im moment ist als platzhalter die start seite drin//
-    header("Location: ../pages/shop-cart.php");
+    header("Location: ../pages/shop-basket.php");
 }
 ?>

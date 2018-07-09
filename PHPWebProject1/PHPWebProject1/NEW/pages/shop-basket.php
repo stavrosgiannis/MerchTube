@@ -103,7 +103,7 @@ include_once '../_class/kunde_DBC.php';
                                                         </a>
                                                     </td>
                                                        <td>
-                                                           <a class="btn btn-default" href="../_module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel='.$datensatz['id_artikel'].'">Delete</a>
+                                                           <a class="btn btn-default" href="../module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel='.$datensatz['id_artikel'].'">Delete</a>
                                                         </td>
                                                 </tr>';
 
