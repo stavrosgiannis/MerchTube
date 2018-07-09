@@ -36,16 +36,56 @@ include '../module/top.php';
                     <hr />
                     <form action="registrierung_antwort.php" method="POST">
                         <div class="form-group">
-                            <label for="name-login">Name</label>
-                            <input name="name-login" type="text" class="form-control" />
+                            <label for="anwender_name">Anwendername</label>
+                            <input name="anwender_name" type="text" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label for="email-login">Anwendername</label>
-                            <input name="email-login" type="text" class="form-control" />
+                            <label for="passwort">Passwort</label>
+                            <input name="passwort" type="password" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label for="password-login">Passwort</label>
-                            <input name="password-login" type="password" class="form-control" />
+                            <label for="Vorname">Vorname</label>
+                            <input name="Vorname" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Nachname">Nachname</label>
+                            <input name="Nachname" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input name="Email" type="email" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse:</label>
+                            <input name="adresse" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="hausnummer">Hausnummer</label>
+                            <input name="hausnummer" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="plz">PLZ</label>
+                            <input name="plz" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ort">Ort</label>
+                            <input name="ort" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="land">Land</label>
+                            <input name="land" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="frage1">Frage1: Wer ist ihr Lieblings Superheld?</label>
+                            <input name="frage1" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="frage2">Frage2: Was ist ihr Lieblings Essen?</label>
+                            <input name="frage2" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="frage3">Frage3: Wer ist ihr Lieblings Promi?</label>
+                            <input name="frage3" type="text" class="form-control" />
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-template-outlined">

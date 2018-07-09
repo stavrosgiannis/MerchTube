@@ -294,7 +294,7 @@ include '../class/kunde_DBC.php';
             <!-- Carousel End-->
         </div>
     </section>
-    <section style="background: url(img/fixed-background-2.jpg) center top no-repeat; background-size: cover;" class="bar no-mb color-white text-center bg-fixed relative-positioned">
+    <!--<section style="background: url(img/fixed-background-2.jpg) center top no-repeat; background-size: cover;" class="bar no-mb color-white text-center bg-fixed relative-positioned">
         <div class="dark-mask"></div>
         <div class="container">
             <div class="icon icon-outlined icon-lg">
@@ -306,8 +306,8 @@ include '../class/kunde_DBC.php';
                 <a href="index2.php" class="btn btn-template-outlined-white btn-lg">See another homepage</a>
             </p>
         </div>
-    </section>
-    <section class="bg-white bar">
+    </section>-->
+    <!--<section class="bg-white bar">
         <div class="container">
             <div class="heading text-center">
                 <h2>From the blog</h2>
@@ -415,7 +415,7 @@ include '../class/kunde_DBC.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="bar bg-gray">
         <div class="container">
             <div class="heading text-center">
@@ -423,39 +423,26 @@ include '../class/kunde_DBC.php';
             </div>
             <ul class="list-unstyled owl-carousel customers no-mb">
                 <li class="item">
-                    <img src="img/customer-1.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-1.png" alt="" class="img-fluid" />
                 </li>
                 <li class="item">
-                    <img src="img/customer-2.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-2.png" alt="" class="img-fluid" />
                 </li>
                 <li class="item">
-                    <img src="img/customer-3.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-3.png" alt="" class="img-fluid" />
                 </li>
                 <li class="item">
-                    <img src="img/customer-4.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-4.png" alt="" class="img-fluid" />
                 </li>
                 <li class="item">
-                    <img src="img/customer-5.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-5.png" alt="" class="img-fluid" />
                 </li>
                 <li class="item">
-                    <img src="img/customer-6.png" alt="" class="img-fluid" />
+                    <img src="../img/customer-6.png" alt="" class="img-fluid" />
                 </li>
             </ul>
         </div>
     </section>
-    <!-- GET IT-->
-    <div class="get-it">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 text-center p-3">
-                    <h3>Do you want cool website like this one?</h3>
-                </div>
-                <div class="col-lg-4 text-center p-3">
-                    <a href="#" class="btn btn-template-outlined-white">Buy this template now</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <?php
