@@ -1,7 +1,6 @@
 <?php
 //---------------------------------------------Top Modul wird includiert-------------------------------------------------------------
 include '../_module/top.php';
-include '../_class/kunde_DBC.php';
 
 ?>
 
@@ -15,7 +14,9 @@ include '../_class/kunde_DBC.php';
 
  if (isset($_SESSION['anwender']))
  {
-	  var_dump ($_SESSION["anwender"]);
+	 if($_SESSION['anwender']->login == 1){
+			var_dump ($_SESSION["anwender"]);
+	 }
  }
  if(isset($_SESSION['ereignis']))
  {

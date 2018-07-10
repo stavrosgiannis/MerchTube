@@ -30,7 +30,10 @@
 		if(Anwender_DBC::checkPasswort($anwender_name, $passwort))
 		{
 			$_SESSION['anwender'] = Anwender_DBC::loadByAnwendername($anwender_name);
+			$anwender = $_SESSION['anwender'];
+			$id_anwender = $anwender->id_anwender;
 			$_SESSION['ereignis'] = 4;
+			Anwender_DBC::einloggen($id_anwender);
 			header('Location: index.php');
 		}
 		else

@@ -94,12 +94,21 @@ class Artikel_DBC
 		if ( $row_cnt< 1)
 		{
 			$suchergebnis = NULL;
-			echo"<h1>Keine Producte gefunden!!</h1>";
+			echo"<h1>Keine Produkte gefunden!!</h1><hr><a href='admintools.php?typ=tool'>Zurück</a>";
 			exit;
 		}
 		else
 		{	
-			echo "<h1>Admin - Produkte aus Katalog entfernen!!!</h1><hr><table style=\"border: solid 1px black\">";
+			echo "<h1>Admin - Produkte aus Katalog entfernen!!!</h1>";					
+			if(isset($_SESSION['ereignis']))
+			{
+				 if ($_SESSION['ereignis'] == 1337)
+				 {
+					  echo "<h2>Artikel entfernet</h2>";
+					  unset($_SESSION['ereignis']);
+				 }
+			}
+			echo"<a href=\"admintools.php?typ=tool\";>Zurück</a><hr><table style=\"border: solid 1px black\">";
 			while($datensatz = $result->fetch_assoc())
 			{
 				echo "<tr>\r\n";
@@ -132,7 +141,52 @@ class Artikel_DBC
 		//utf-8 wird in der datenbank verwendet
 		$mysqli->set_charset("utf8");
 
-		$delete = "delete from tbl_artikel WHERE artikelnummer=$artikelnummer";
+		$delete = "delete from tbl_artikel WHERE artikelnummer='$artikelnummer'";
 		$mysqli->query($delete);
+		$_SESSION['ereignis'] = 1337;
 	}	
+	
+	static function admin_artikel_hinzufuegen($bezeichnung, $beschreibung, $preis, $artnr, $status)
+	{
+		$ergebnis = false;
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ".
+            $mysqli-connect_errno;
+		}
+		
+		$sql = "INSERT INTO tbl_artikel (id_artikel, bezeichnug, beschreibung, preis, status, bildpfadname, artikelnummer)
+		VALUES ('NULL', '$bezeichnung', '$beschreibung', '$preis','0','NULL', '$artnr')";
+		if ($mysqli->query($sql) === TRUE) {
+		$_SESSION['ereignis'] = 1338;
+		header('Location: admintools.php?typ=hinzufügen');
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $mysqli->error;
+		}
+	}
+	
+	static function artwar( $id_anwender, $id_artikel)
+	{
+		$ergebnis = false;
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ".
+            $mysqli-connect_errno;
+		}
+		
+		$sql = "INSERT INTO tbl_warenkorb (anwender_id, artikel_id, menge) VALUES ('$id_anwender', '$id_artikel', '1');";
+		if ($mysqli->query($sql) === TRUE) {
+		$_SESSION['ereignis'] = 1339;
+		header('Location: admintools.php?typ=hinzufügen');
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $mysqli->error;
+		}	
+	}
 }

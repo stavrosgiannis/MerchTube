@@ -42,7 +42,7 @@
 				
 				echo
 				"<td style=\"border: solid 1px black\">".$datensatz['bezeichnug']."</td>".
-				"<td style=\"border: solid 1px black\">".$datensatz['beschriebung']."</td>".
+				"<td style=\"border: solid 1px black\">".$datensatz['beschreibung']."</td>".
 				"<td style=\"border: solid 1px black\">".$datensatz['menge']."</td>".
 				"<td style=\"border: solid 1px black\">$preis</td>".
 				"<td style=\"border: solid 1px black\"><a href=\"../_module/loeschewarenkorbinhalt.php?typ=entfernen&id_artikel=".$datensatz['id_artikel']."\">Entfernen</a></td>";

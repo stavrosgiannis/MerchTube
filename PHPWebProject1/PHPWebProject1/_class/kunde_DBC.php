@@ -118,11 +118,12 @@ class Anwender_DBC
 			exit;
 		}
 		
-		$sql = "INSERT INTO tbl_anwender (`id_anwender`, `vorname`, `nachname`, `email`, `passwort`, `anwender_name`, `profilbild_id`, `adresse_id`, `login`, `rechnung_id`, `geschaeftsanwender_id`, `partner_id`, `bankverbindung_id`, `salt`, `frage1`, `frage2`, `frage3`) 
-									VALUES (NULL, '$vorname', '$nachname', '$email', '$passwort', '$anwender_name', NULL, NULL, '0', NULL, NULL, NULL, NULL, '$salt', '$frage1', '$frage2', '$frage3')";
-		
-		print_r ($sql);
+		$sql = "INSERT INTO tbl_anwender (vorname, nachname, email, passwort, anwender_name, profilbild_id, adresse_id, login, geschaeftsanwender_id, partner_id, bankverbindung_id, salt, frage1, frage2, frage3) 
+									VALUES ('$vorname', '$nachname', '$email', '$passwort', '$anwender_name', NULL, NULL, '0', NULL, NULL, NULL, '$salt', '$frage1', '$frage2', '$frage3')";
 		$result = $mysqli->query($sql);
+		$id_anwender = $mysqli->insert_id;
+		$sql1 = "INSERT INTO tbl_eingeloggt (anwender_id,eingeloggt) VALUES ('$id_anwender', '0');";
+		$result = $mysqli->query($sql1);
 		
 		if ($result == 1)
 		{
@@ -255,7 +256,7 @@ class Anwender_DBC
 			return $ergebnis;
 		}
 
-		$sql = "INSERT INTO tbl_adresse(strasse, hausnummer, plz, ort, typ, anwender_id ) values ('".$anschrift->strasse."','".$anschrift->hausnummer."', '".$anschrift->plz."', '".$anschrift->$ort."','".$typ."','".$anwender->$id_anwender."')';";
+		$sql = "INSERT INTO tbl_adresse(strasse, hausnummer, plz, ort, typ, anwender_id ) values ('".$anschrift->strasse."','".$anschrift->hausnummer."', '".$anschrift->plz."', '".$anschrift->$ort."','".$typ."','".$anwender->$id_anwender."')";
 
 		if ($mysqli->query($sql) === TRUE)
 		{
@@ -380,6 +381,38 @@ class Anwender_DBC
 		}
 		return $ergebnis;
 	}	
+
+	public static function einloggen($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+		}
+
+		$sql = "UPDATE tbl_eingeloggt SET eingeloggt = '1' WHERE anwender_id = '$id_anwender';";
+		$result = $mysqli->query($sql);
+
+	}
+
+	public static function ausloggen($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+		}
+
+		$sql = "UPDATE tbl_eingeloggt SET eingeloggt = '0' WHERE anwender_id = '$id_anwender';";
+		$result = $mysqli->query($sql);
+
+	}	
 	
 	static function suche($sucheingabe)
 	{
@@ -420,12 +453,174 @@ class Anwender_DBC
 				}
 				 echo "<td style=\"border: solid 1px black\">".$datensatz['bezeichnug']."</td>".
 						"<td style=\"border: solid 1px black\">".$datensatz['preis']."</td>".
-						"<td style=\"border: solid 1px black\">".$datensatz['beschriebung']."</td>";
+						"<td style=\"border: solid 1px black\">".$datensatz['beschreibung']."</td>".
+						"<td style=\"border: solid 1px black\"><a href=\"artikel_warenkorb.php?artnum=".$datensatz['id_artikel']."\">In Warenkorb legen</a></td>";
 						echo"</tr>";
 			}
 			echo"</table></div>";
 		}
-	}
+	}	
+	
+	static function adminonlineuser()
+	{
+		$ergebnis = false;
 
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ".
+            $mysqli-connect_errno;
+			return $ergebnis;
+		}
+
+		$sql = "SELECT * 
+				FROM tbl_eingeloggt, tbl_anwender 
+				WHERE id_anwender = anwender_id;";
+				
+		$result = $mysqli->query($sql);
+		$row_cnt = $result->num_rows;
+		echo"<div class=\"maincontent-area align-container\">";
+		if ( $row_cnt< 1)
+		{
+			$suchergebnis = NULL;
+			echo"<h1>Admin - Keine Ergebnisse gefunden</h1>";
+			exit;
+		}
+		else
+		{	
+			echo "<h1>Admin - Online Benutzer</h1><hr><table style=\"border: solid 1px black\"><th style=\"border: solid 1px black\">Status</th><th style=\"border: solid 1px black\">id_anwender</th><th style=\"border: solid 1px black\">Rang</th><th style=\"border: solid 1px black\">Vorname</th><th>Nachname</th><th style=\"border: solid 1px black\">Set Admin</th><th style=\"border: solid 1px black\">Kick</th><th style=\"border: solid 1px black\">Banhammer</th></tr><tr>";
+			while($datensatz = $result->fetch_assoc())
+			{
+				echo "<tr>\r\n";
+				
+				if($datensatz['eingeloggt'] == 1){
+					echo "<td style=\"border: solid 1px black;color:green;\">Online</td>";
+				}
+				if($datensatz['eingeloggt'] == 0){
+					echo "<td style=\"border: solid 1px black;color:red;\">Offline</td>";
+				}
+				
+				 echo "<td style=\"border: solid 1px black\">".$datensatz['id_anwender']."</td>";
+				 
+				if($datensatz['login'] == 1){
+					echo "<td style=\"border: solid 1px black;color:blue;\">Admin</td>";
+				}
+				if($datensatz['login'] == 2){
+					echo "<td style=\"border: solid 1px black;color:red;\">BAN</td>";
+				}
+				if($datensatz['login'] == 3){
+					echo "<td style=\"border: solid 1px black;color:grey;\">User(Kick)</td>";
+				}
+				if($datensatz['login'] == 0){
+					echo "<td style=\"border: solid 1px black;color:grey;\">User</td>";
+				}				 
+				
+				 echo "<td style=\"border: solid 1px black\">".$datensatz['vorname']."</td>".
+						"<td style=\"border: solid 1px black\">".$datensatz['nachname']."</td>".
+						"<td style=\"border: solid 1px black\"><a href=\"admintools.php?typ=kick&id_anwender=".$datensatz['id_anwender']."\">Kicken</a></td>";
+						
+				if($datensatz['login'] == 1){
+					echo "<td style=\"border: solid 1px black;color:blue;\"><a href=\"adminset.php?id_anwender=".$datensatz['id_anwender']."&typ=admin\">Set User</td>";
+				}
+				if($datensatz['login'] == 2){
+					echo "<td style=\"border: solid 1px black;color:blue;\"><a href=\"adminset.php?id_anwender=".$datensatz['id_anwender']."&typ=admin\">Deban</td>";
+				}
+				if($datensatz['login'] == 3){
+					echo "<td style=\"border: solid 1px black;color:blue;\"><a href=\"adminset.php?id_anwender=".$datensatz['id_anwender']."&typ=admin\">Unkick</td>";
+				}
+				if($datensatz['login'] == 0){
+					echo "<td style=\"border: solid 1px black;color:blue;\"><a href=\"adminset.php?id_anwender=".$datensatz['id_anwender']."&typ=user\">Set Admin</td>";
+				}	
+				
+						echo"<td style=\"border: solid 1px black\"><a style=\"text-docoration:none;color:red;\" href=\"admintools.php?typ=ban&id_anwender=".$datensatz['id_anwender']."\">Ban</a></td>";
+						echo"</tr>";
+			}
+			echo"</table><hr><a href=\"admintools.php?typ=tool\">Zurück</a></div>";
+		}
+		
+	}	
+	
+		public static function adminkick($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+		}
+
+		$sql = "UPDATE tbl_anwender SET login = '3' WHERE tbl_anwender.id_anwender = $id_anwender;";
+		$result = $mysqli->query($sql);
+		header('Location: admintools.php?typ=onlineuser');
+
+	}
+	
+		public static function adminban($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+			end;
+		}
+
+		$sql = "UPDATE tbl_anwender SET login = '2' WHERE id_anwender = '$id_anwender';";
+		$result = $mysqli->query($sql);
+		header('Location: admintools.php?typ=onlineuser');
+	}		
+	
+	public static function unkick($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+			end;
+		}
+
+		$sql = "UPDATE tbl_anwender SET login = '0' WHERE id_anwender = '$id_anwender';";
+		$result = $mysqli->query($sql);
+	}		
+	
+	public static function adminsetadmin($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+			end;
+		}
+
+		$sql = "UPDATE tbl_anwender SET login = '1' WHERE id_anwender = '$id_anwender';";
+		$result = $mysqli->query($sql);
+	}	
+	
+	public static function adminsetuser($id_anwender)
+	{
+
+		$mysqli = new mysqli(DB::$dbserver, DB::$dbuser, DB::$dbpassword, DB::$dbname);
+
+		if ($mysqli->connect_errno)
+		{
+			echo "Verbindung zur DB fehlgeschlagen: ". $mysqli-connect_errno;
+			return false;
+			end;
+		}
+
+		$sql = "UPDATE tbl_anwender SET login = '0' WHERE id_anwender = '$id_anwender';";
+		$result = $mysqli->query($sql);
+	}
 }
 ?>
